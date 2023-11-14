@@ -3,4 +3,12 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+    {% for article in articles %}
+        <div>
+            <h2>{{ article.name }}</h2>
+            <span>{{ article.description }}</span>
+            <span>{{ article.content }}</span>
+
+        </div>
+    {% endfor %}
 {% endblock %}

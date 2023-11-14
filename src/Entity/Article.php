@@ -33,7 +33,7 @@ class Article
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'articles')]
-    private ?User $user_id = null;
+    private ?User $user = null;
 
     #[ORM\OneToMany(mappedBy: 'article_id', targetEntity: Rating::class)]
     private Collection $ratings;
